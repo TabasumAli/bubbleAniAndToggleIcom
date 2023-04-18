@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="bubbles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles Animation</title>
+</head>
+<body>
+    <section>
+        <!-- <h2>Bubbles</h2> -->
+    </section>
+    <script>
+        function createBubbles(){
+            const section = document.querySelector('section');
+            const createdElem = document.createElement('span');
+            var size = Math.random() * 50;
+
+            createdElem.style.width =  20 + size + 'px'; 
+            createdElem.style.height =  20 + size + 'px'; 
+            createdElem.style.left = Math.random() * 1280 + 'px'; 
+            
+            createdElem.style.border = "2px solid pink";
+            createdElem.style.borderRadius = "50%";
+            section.appendChild(createdElem);
+
+            setTimeout(()=>{
+                createdElem.remove();
+            },11000)
+        }
+        setInterval(createBubbles, 200)
+    </script>
+    
+</body>
+</html>

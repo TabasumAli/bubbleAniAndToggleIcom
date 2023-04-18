@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 100px;
+    height: 50px;
+    transform: translate(50%,50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container .toggle{
+    position: absolute;    
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 40px;
+    
+}
+
+.container .toggle .toggle-button{
+    position: absolute;    
+    background: url('khush.png') no-repeat center center/cover;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .toggle.active{
+    background-color: rgb(42, 131, 182);
+    
+}
+
+.container .toggle.active .toggle-button{
+    left: 50px;
+    background: url('khafa.png') no-repeat center center/cover;
+}
+.container .text{
+    position: absolute;
+    left: 106px;
+}
